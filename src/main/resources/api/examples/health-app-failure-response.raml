@@ -1,0 +1,43 @@
+#%RAML 1.0 NamedExample
+{
+  "request" : {
+    "timestamp": "2019-12-27T11:23:18.168-06:00",
+    "correlationId": "925bfc10-28cd-11ea-b774-105bad3268d7",
+    "url": "http://localhost:8081/lib/health/check",
+    "status": "ERROR"
+  },  
+  "mule" : {
+    "appName" : "health-check-api-example",
+    "runtimeVersion" : "4.2.2",
+    "environment" : "DEV"
+  },
+  "systems" : [  
+      {
+        "name": "HTTPS",
+        "connectionConfig": "api-dev.srs.aws.avioconsulting.com:443/orders-system-api",
+        "user": "N/A",
+        "status": "OK",
+        "exception": "N/A",
+        "timestamp": "2019-12-27T11:23:18.168-06:00",
+        "executionTime" : 10.7
+      },
+      {
+        "name" : "Amazon S3",
+        "connectionConfig" : "N/A",
+        "user": "N/A",
+        "status" : "ERROR",
+        "exception": "N/A",
+        "timestamp": "2019-12-27T11:23:18.168-06:00",
+        "executionTime" : 10.7
+      },
+      {
+        "name": "SQLServer",
+        "connectionConfig": "jdbc:sqlserver://localhost;ODSAPI;ODSApiApp",
+        "user": "sql-user",
+        "status": "OK",
+        "exception": "",
+        "timestamp": "2019-12-27T11:23:18.168-06:00",
+        "executionTime" : 10.7
+      }
+  ]    
+}
